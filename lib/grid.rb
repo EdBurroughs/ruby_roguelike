@@ -12,4 +12,8 @@ class Grid
   def[]=(row,col,value)
     @cells[row][col] = value
   end
+
+  def valid_move?(row, col)
+    row >=0 && row < @rows && col>=0 && col < @columns
+  end
 end
